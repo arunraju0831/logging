@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
-from django.http import HttpResponse
+from mysite import log_conf
 
 
 def index(request):
+    log_conf.log()
     return render(request, "hello.html", {})
-
